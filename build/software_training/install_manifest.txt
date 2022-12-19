@@ -1,0 +1,15 @@
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/ament_index/resource_index/package_run_dependencies/software_training
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/ament_index/resource_index/parent_prefix_path/software_training
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/environment/ament_prefix_path.sh
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/environment/ament_prefix_path.dsv
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/environment/path.sh
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/environment/path.dsv
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/local_setup.bash
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/local_setup.sh
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/local_setup.zsh
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/local_setup.dsv
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/package.dsv
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/ament_index/resource_index/packages/software_training
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/cmake/software_trainingConfig.cmake
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/cmake/software_trainingConfig-version.cmake
+/home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/package.xml

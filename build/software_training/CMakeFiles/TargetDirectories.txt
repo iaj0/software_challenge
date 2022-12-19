@@ -1,0 +1,9 @@
+/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/uninstall.dir
+/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/software_training_uninstall.dir
+/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/test.dir
+/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/edit_cache.dir
+/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/rebuild_cache.dir
+/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/list_install_components.dir
+/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/install.dir
+/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/install/local.dir
+/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/install/strip.dir

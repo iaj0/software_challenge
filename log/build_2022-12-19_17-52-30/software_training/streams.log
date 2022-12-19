@@ -1,0 +1,44 @@
+[0.021s] Invoking command in '/home/edw/Documents/uwrt/software_challenge/build/software_training': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake /home/edw/Documents/uwrt/software_challenge/src/software_training -DCMAKE_INSTALL_PREFIX=/home/edw/Documents/uwrt/software_challenge/install/software_training
+[0.768s] -- The C compiler identification is Clang 10.0.0
+[1.009s] -- The CXX compiler identification is Clang 10.0.0
+[1.034s] -- Detecting C compiler ABI info
+[1.171s] -- Detecting C compiler ABI info - done
+[1.186s] -- Check for working C compiler: /usr/bin/clang - skipped
+[1.186s] -- Detecting C compile features
+[1.187s] -- Detecting C compile features - done
+[1.192s] -- Detecting CXX compiler ABI info
+[1.316s] -- Detecting CXX compiler ABI info - done
+[1.327s] -- Check for working CXX compiler: /usr/bin/clang++ - skipped
+[1.327s] -- Detecting CXX compile features
+[1.327s] -- Detecting CXX compile features - done
+[1.345s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[1.393s] -- Found PythonInterp: /home/edw/anaconda3/bin/python3 (found suitable version "3.9.7", minimum required is "3") 
+[1.393s] -- Using PYTHON_EXECUTABLE: /home/edw/anaconda3/bin/python3
+[1.518s] -- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[1.725s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.728s] -- Added test 'lint_cmake' to check CMake code style
+[1.730s] -- Added test 'xmllint' to check XML markup files
+[1.732s] -- Configuring done
+[1.736s] -- Generating done
+[1.737s] -- Build files have been written to: /home/edw/Documents/uwrt/software_challenge/build/software_training
+[1.740s] Invoked command in '/home/edw/Documents/uwrt/software_challenge/build/software_training' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake /home/edw/Documents/uwrt/software_challenge/src/software_training -DCMAKE_INSTALL_PREFIX=/home/edw/Documents/uwrt/software_challenge/install/software_training
+[1.745s] Invoking command in '/home/edw/Documents/uwrt/software_challenge/build/software_training': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake --build /home/edw/Documents/uwrt/software_challenge/build/software_training -- -j12 -l12
+[1.767s] Invoked command in '/home/edw/Documents/uwrt/software_challenge/build/software_training' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake --build /home/edw/Documents/uwrt/software_challenge/build/software_training -- -j12 -l12
+[1.811s] Invoking command in '/home/edw/Documents/uwrt/software_challenge/build/software_training': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake --install /home/edw/Documents/uwrt/software_challenge/build/software_training
+[1.818s] -- Install configuration: ""
+[1.818s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/ament_index/resource_index/package_run_dependencies/software_training
+[1.818s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/ament_index/resource_index/parent_prefix_path/software_training
+[1.818s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/environment/ament_prefix_path.sh
+[1.818s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/environment/ament_prefix_path.dsv
+[1.818s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/environment/path.sh
+[1.819s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/environment/path.dsv
+[1.819s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/local_setup.bash
+[1.819s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/local_setup.sh
+[1.819s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/local_setup.zsh
+[1.819s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/local_setup.dsv
+[1.819s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/package.dsv
+[1.819s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/ament_index/resource_index/packages/software_training
+[1.819s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/cmake/software_trainingConfig.cmake
+[1.820s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/cmake/software_trainingConfig-version.cmake
+[1.820s] -- Installing: /home/edw/Documents/uwrt/software_challenge/install/software_training/share/software_training/package.xml
+[1.823s] Invoked command in '/home/edw/Documents/uwrt/software_challenge/build/software_training' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake --install /home/edw/Documents/uwrt/software_challenge/build/software_training
