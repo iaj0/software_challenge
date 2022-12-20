@@ -5,11 +5,46 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+# -------------------------------------------------------------------
 # find dependencies
+# -------------------------------------------------------------------
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclcpp_components REQUIRED)
+find_package(turtlesim REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(builtin_interfaces REQUIRED)
+
+
+include_directories(include/software_training)
+
+
+
+# -------------------------------------------------------------------
+# P1
+# -------------------------------------------------------------------
+# add_library(p1 SHARED
+#             src/p1_clear.cpp)
+
+add_executable(p1 src/p1_clear.cpp)
+
+ament_target_dependencies(p1
+  "rclcpp"
+  "rclcpp_components"
+  "turtlesim"
+  "std_msgs")   
+# rclcpp_components_register_nodes(p1 "composition::turtle_service_request_node")
+
+
+install(
+  TARGETS
+    p1
+  DESTINATION
+    lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

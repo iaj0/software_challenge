@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/edw/Documents/uwrt/software_challenge/build/software_tr
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/p1.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,6 +73,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/software_training_uninstall.dir/clean
+clean: CMakeFiles/p1.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -126,6 +127,32 @@ software_training_uninstall: CMakeFiles/software_training_uninstall.dir/rule
 CMakeFiles/software_training_uninstall.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/software_training_uninstall.dir/build.make CMakeFiles/software_training_uninstall.dir/clean
 .PHONY : CMakeFiles/software_training_uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/p1.dir
+
+# All Build rule for target.
+CMakeFiles/p1.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1.dir/build.make CMakeFiles/p1.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1.dir/build.make CMakeFiles/p1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles --progress-num=1,2 "Built target p1"
+.PHONY : CMakeFiles/p1.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/p1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/p1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles 0
+.PHONY : CMakeFiles/p1.dir/rule
+
+# Convenience name for target.
+p1: CMakeFiles/p1.dir/rule
+.PHONY : p1
+
+# clean rule for target.
+CMakeFiles/p1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1.dir/build.make CMakeFiles/p1.dir/clean
+.PHONY : CMakeFiles/p1.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,0 +1,8 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/p1.dir/src/p1_clear.cpp.o[0m
+[1m/home/edw/Documents/uwrt/software_challenge/src/software_training/src/p1_clear.cpp:1:10: [0m[0;1;31mfatal error: [0m[1m'include/software_training/p1_clear.hpp' file not found[0m
+#include "include/software_training/p1_clear.hpp"
+[0;1;32m         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0m1 error generated.
+make[2]: *** [CMakeFiles/p1.dir/build.make:76: CMakeFiles/p1.dir/src/p1_clear.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/p1.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

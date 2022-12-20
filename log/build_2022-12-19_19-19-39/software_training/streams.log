@@ -1,0 +1,37 @@
+[0.023s] Invoking command in '/home/edw/Documents/uwrt/software_challenge/build/software_training': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake --build /home/edw/Documents/uwrt/software_challenge/build/software_training -- -j12 -l12
+[0.049s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.079s] -- Using PYTHON_EXECUTABLE: /home/edw/anaconda3/bin/python3
+[0.158s] -- Found rclcpp: 9.2.1 (/opt/ros/galactic/share/rclcpp/cmake)
+[0.187s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.190s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.331s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.376s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.377s] -- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[0.391s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.498s] -- Found rclcpp_components: 9.2.1 (/opt/ros/galactic/share/rclcpp_components/cmake)
+[0.539s] -- Found turtlesim: 1.3.4 (/opt/ros/galactic/share/turtlesim/cmake)
+[0.617s] -- Found geometry_msgs: 2.2.4 (/opt/ros/galactic/share/geometry_msgs/cmake)
+[0.642s] -- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)
+[0.651s] -- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[0.793s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.794s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.794s] -- Configured cppcheck include dirs: /home/edw/Documents/uwrt/software_challenge/src/software_training/include/software_training
+[0.794s] -- Configured cppcheck exclude dirs and/or files: 
+[0.794s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.795s] -- Configured cpplint exclude dirs and/or files: 
+[0.795s] -- Added test 'lint_cmake' to check CMake code style
+[0.796s] -- Added test 'uncrustify' to check C / C++ code style
+[0.796s] -- Configured uncrustify additional arguments: 
+[0.796s] -- Added test 'xmllint' to check XML markup files
+[0.797s] -- Configuring done
+[0.806s] -- Generating done
+[0.808s] -- Build files have been written to: /home/edw/Documents/uwrt/software_challenge/build/software_training
+[0.837s] [ 50%] [32mBuilding CXX object CMakeFiles/p1.dir/src/p1_clear.cpp.o[0m
+[0.882s] [1m/home/edw/Documents/uwrt/software_challenge/src/software_training/src/p1_clear.cpp:1:10: [0m[0;1;31mfatal error: [0m[1m'include/software_training/p1_clear.hpp' file not found[0m
+[0.882s] #include "include/software_training/p1_clear.hpp"
+[0.882s] [0;1;32m         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0.882s] [0m1 error generated.
+[0.885s] make[2]: *** [CMakeFiles/p1.dir/build.make:76: CMakeFiles/p1.dir/src/p1_clear.cpp.o] Error 1
+[0.886s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/p1.dir/all] Error 2
+[0.886s] make: *** [Makefile:146: all] Error 2
+[0.890s] Invoked command in '/home/edw/Documents/uwrt/software_challenge/build/software_training' returned '2': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake --build /home/edw/Documents/uwrt/software_challenge/build/software_training -- -j12 -l12

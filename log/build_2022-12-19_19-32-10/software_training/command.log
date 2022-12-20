@@ -1,0 +1,2 @@
+Invoking command in '/home/edw/Documents/uwrt/software_challenge/build/software_training': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake --build /home/edw/Documents/uwrt/software_challenge/build/software_training -- -j12 -l12
+Invoked command in '/home/edw/Documents/uwrt/software_challenge/build/software_training' returned '2': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake --build /home/edw/Documents/uwrt/software_challenge/build/software_training -- -j12 -l12

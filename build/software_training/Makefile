@@ -197,6 +197,43 @@ software_training_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/software_training_uninstall.dir/build.make CMakeFiles/software_training_uninstall.dir/build
 .PHONY : software_training_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named p1
+
+# Build rule for target.
+p1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 p1
+.PHONY : p1
+
+# fast build rule for target.
+p1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1.dir/build.make CMakeFiles/p1.dir/build
+.PHONY : p1/fast
+
+src/p1_clear.o: src/p1_clear.cpp.o
+.PHONY : src/p1_clear.o
+
+# target to build an object file
+src/p1_clear.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1.dir/build.make CMakeFiles/p1.dir/src/p1_clear.cpp.o
+.PHONY : src/p1_clear.cpp.o
+
+src/p1_clear.i: src/p1_clear.cpp.i
+.PHONY : src/p1_clear.i
+
+# target to preprocess a source file
+src/p1_clear.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1.dir/build.make CMakeFiles/p1.dir/src/p1_clear.cpp.i
+.PHONY : src/p1_clear.cpp.i
+
+src/p1_clear.s: src/p1_clear.cpp.s
+.PHONY : src/p1_clear.s
+
+# target to generate assembly for a file
+src/p1_clear.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p1.dir/build.make CMakeFiles/p1.dir/src/p1_clear.cpp.s
+.PHONY : src/p1_clear.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +249,10 @@ help:
 	@echo "... test"
 	@echo "... software_training_uninstall"
 	@echo "... uninstall"
+	@echo "... p1"
+	@echo "... src/p1_clear.o"
+	@echo "... src/p1_clear.i"
+	@echo "... src/p1_clear.s"
 .PHONY : help
 
 

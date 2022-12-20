@@ -3,9 +3,9 @@
 <package format="3">
   <name>software_training</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>software training for uwrt</description>
   <maintainer email="edawordwang@gmail.com">edw</maintainer>
-  <license>TODO: License declaration</license>
+  <license>sigma license (none)</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
