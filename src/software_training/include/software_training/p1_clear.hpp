@@ -1,5 +1,3 @@
-// #ifndef P1_CLEAR_HPP
-// #define P1_CLEAR_HPP
 #pragma once
 
 #include <cstdlib>
@@ -11,7 +9,7 @@
 
 #include <turtlesim/srv/kill.hpp>
 
-namespace composition {
+// namespace composition {
 class p1_clear : public rclcpp::Node {
     public:
         p1_clear(const rclcpp::NodeOptions &options);
@@ -23,6 +21,4 @@ class p1_clear : public rclcpp::Node {
 
 };
 
-}
-
-// #endif
+// }
