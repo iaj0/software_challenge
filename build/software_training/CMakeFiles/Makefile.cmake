@@ -385,6 +385,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/galactic/share/rclcpp_components/cmake/rclcpp_components-extras.cmake"
   "/opt/ros/galactic/share/rclcpp_components/cmake/rclcpp_componentsConfig-version.cmake"
   "/opt/ros/galactic/share/rclcpp_components/cmake/rclcpp_componentsConfig.cmake"
+  "/opt/ros/galactic/share/rclcpp_components/cmake/rclcpp_components_package_hook.cmake"
   "/opt/ros/galactic/share/rclcpp_components/cmake/rclcpp_components_register_node.cmake"
   "/opt/ros/galactic/share/rclcpp_components/cmake/rclcpp_components_register_nodes.cmake"
   "/opt/ros/galactic/share/rcpputils/cmake/ament_cmake_export_dependencies-extras.cmake"
@@ -734,6 +735,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/software_training"
   "ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/software_training"
   "ament_cmake_index/share/ament_index/resource_index/packages/software_training"
+  "ament_cmake_index/share/ament_index/resource_index/rclcpp_components/software_training"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

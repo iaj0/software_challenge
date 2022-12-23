@@ -9,16 +9,16 @@
 
 #include <turtlesim/srv/kill.hpp>
 
-// namespace composition {
+namespace software_training {
 class p1_clear : public rclcpp::Node {
     public:
         p1_clear(const rclcpp::NodeOptions &options);
     private:
-        std::shared_ptr<rclcpp::Client<turtlesim::srv::Kill>> client;
+        rclcpp::Client<turtlesim::srv::Kill>::SharedPtr client;
         std::vector<std::string> nodes = {"turtle1"}; // why static?
-        std::shared_ptr<rclcpp::TimerBase> timer_;
+        rclcpp::TimerBase::SharedPtr timer_;
         void kill();
 
 };
 
-// }
+}

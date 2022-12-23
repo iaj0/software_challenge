@@ -1,9 +1,0 @@
-[0.021s] Invoking command in '/home/edw/Documents/uwrt/software_challenge/build/software_training': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake --build /home/edw/Documents/uwrt/software_challenge/build/software_training -- -j12 -l12
-[0.081s] [ 50%] [32m[1mLinking CXX executable p1[0m
-[0.196s] /usr/bin/ld: /usr/bin/../lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crt1.o: in function `_start':
-[0.197s] (.text+0x24): undefined reference to `main'
-[0.202s] clang: [0;1;31merror: [0mlinker command failed with exit code 1 (use -v to see invocation)[0m
-[0.207s] make[2]: *** [CMakeFiles/p1.dir/build.make:168: p1] Error 1
-[0.208s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/p1.dir/all] Error 2
-[0.208s] make: *** [Makefile:146: all] Error 2
-[0.210s] Invoked command in '/home/edw/Documents/uwrt/software_challenge/build/software_training' returned '2': CMAKE_PREFIX_PATH=/opt/ros/galactic CONDA_PROMPT_MODIFIER=(base) /usr/local/bin/cmake --build /home/edw/Documents/uwrt/software_challenge/build/software_training -- -j12 -l12

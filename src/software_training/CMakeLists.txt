@@ -19,25 +19,25 @@ find_package(geometry_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 
 
-include_directories(include/software_training)
-
-
+# include_directories(include/software_training)
+include_directories(include)
 
 # -------------------------------------------------------------------
 # P1
 # -------------------------------------------------------------------
-# add_library(p1 SHARED
-#             src/p1_clear.cpp)
+# add_executable(p1 src/p1_clear.cpp)
+add_library(p1 SHARED
+            src/p1_clear.cpp)
 
-add_executable(p1 src/p1_clear.cpp)
+target_compile_definitions(p1 PRIVATE "SOFTWARE_TRAINING_BUILDING_DLL")
 
 ament_target_dependencies(p1
   "rclcpp"
   "rclcpp_components"
   "turtlesim"
   "std_msgs")   
-# rclcpp_components_register_nodes(p1 "composition::turtle_service_request_node")
-
+rclcpp_components_register_nodes(p1 "software_training::p1_clear")
+set(node_plugins "${node_plugins}software_training::p1_clear;$<TARGET_FILE:p1>\n")
 
 install(
   TARGETS
@@ -56,5 +56,13 @@ if(BUILD_TESTING)
   #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+# -------------------------------------------------------------------
+# Launch File
+# -------------------------------------------------------------------
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}/
+)
 
 ament_package()

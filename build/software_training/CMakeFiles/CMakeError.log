@@ -1,24 +1,22 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-9RIclV
+Change Dir: /home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-4XaP0W
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_f1f6e/fast && make[1]: Entering directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-9RIclV'
-/usr/bin/make  -f CMakeFiles/cmTC_f1f6e.dir/build.make CMakeFiles/cmTC_f1f6e.dir/build
-make[2]: Entering directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-9RIclV'
-Building C object CMakeFiles/cmTC_f1f6e.dir/src.c.o
-/usr/bin/clang -DCMAKE_HAVE_LIBC_PTHREAD   -MD -MT CMakeFiles/cmTC_f1f6e.dir/src.c.o -MF CMakeFiles/cmTC_f1f6e.dir/src.c.o.d -o CMakeFiles/cmTC_f1f6e.dir/src.c.o -c /home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-9RIclV/src.c
-Linking C executable cmTC_f1f6e
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1f6e.dir/link.txt --verbose=1
-/usr/bin/clang CMakeFiles/cmTC_f1f6e.dir/src.c.o -o cmTC_f1f6e 
-/usr/bin/ld: CMakeFiles/cmTC_f1f6e.dir/src.c.o: in function `main':
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_671b8/fast && /usr/bin/make  -f CMakeFiles/cmTC_671b8.dir/build.make CMakeFiles/cmTC_671b8.dir/build
+make[1]: Entering directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-4XaP0W'
+Building C object CMakeFiles/cmTC_671b8.dir/src.c.o
+/usr/bin/clang -DCMAKE_HAVE_LIBC_PTHREAD   -MD -MT CMakeFiles/cmTC_671b8.dir/src.c.o -MF CMakeFiles/cmTC_671b8.dir/src.c.o.d -o CMakeFiles/cmTC_671b8.dir/src.c.o -c /home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-4XaP0W/src.c
+Linking C executable cmTC_671b8
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_671b8.dir/link.txt --verbose=1
+/usr/bin/clang CMakeFiles/cmTC_671b8.dir/src.c.o -o cmTC_671b8 
+/usr/bin/ld: CMakeFiles/cmTC_671b8.dir/src.c.o: in function `main':
 src.c:(.text+0x25): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x31): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x3d): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.c:(.text+0x4f): undefined reference to `pthread_join'
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[2]: *** [CMakeFiles/cmTC_f1f6e.dir/build.make:100: cmTC_f1f6e] Error 1
-make[2]: Leaving directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-9RIclV'
-make[1]: *** [Makefile:127: cmTC_f1f6e/fast] Error 2
-make[1]: Leaving directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-9RIclV'
+make[1]: *** [CMakeFiles/cmTC_671b8.dir/build.make:100: cmTC_671b8] Error 1
+make[1]: Leaving directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-4XaP0W'
+make: *** [Makefile:127: cmTC_671b8/fast] Error 2
 
 
 Source file was:
@@ -44,22 +42,20 @@ int main(void)
 
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-NxRDVV
+Change Dir: /home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-XXUNwZ
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_a7fec/fast && make[1]: Entering directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-NxRDVV'
-/usr/bin/make  -f CMakeFiles/cmTC_a7fec.dir/build.make CMakeFiles/cmTC_a7fec.dir/build
-make[2]: Entering directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-NxRDVV'
-Building C object CMakeFiles/cmTC_a7fec.dir/CheckFunctionExists.c.o
-/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create -MD -MT CMakeFiles/cmTC_a7fec.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_a7fec.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_a7fec.dir/CheckFunctionExists.c.o -c /home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-NxRDVV/CheckFunctionExists.c
-Linking C executable cmTC_a7fec
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7fec.dir/link.txt --verbose=1
-/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_a7fec.dir/CheckFunctionExists.c.o -o cmTC_a7fec  -lpthreads 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_51598/fast && /usr/bin/make  -f CMakeFiles/cmTC_51598.dir/build.make CMakeFiles/cmTC_51598.dir/build
+make[1]: Entering directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-XXUNwZ'
+Building C object CMakeFiles/cmTC_51598.dir/CheckFunctionExists.c.o
+/usr/bin/clang   -DCHECK_FUNCTION_EXISTS=pthread_create -MD -MT CMakeFiles/cmTC_51598.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_51598.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_51598.dir/CheckFunctionExists.c.o -c /home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-XXUNwZ/CheckFunctionExists.c
+Linking C executable cmTC_51598
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51598.dir/link.txt --verbose=1
+/usr/bin/clang  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_51598.dir/CheckFunctionExists.c.o -o cmTC_51598  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[2]: *** [CMakeFiles/cmTC_a7fec.dir/build.make:100: cmTC_a7fec] Error 1
-make[2]: Leaving directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-NxRDVV'
-make[1]: *** [Makefile:127: cmTC_a7fec/fast] Error 2
-make[1]: Leaving directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-NxRDVV'
+make[1]: *** [CMakeFiles/cmTC_51598.dir/build.make:100: cmTC_51598] Error 1
+make[1]: Leaving directory '/home/edw/Documents/uwrt/software_challenge/build/software_training/CMakeFiles/CMakeScratch/TryCompile-XXUNwZ'
+make: *** [Makefile:127: cmTC_51598/fast] Error 2
 
 
 

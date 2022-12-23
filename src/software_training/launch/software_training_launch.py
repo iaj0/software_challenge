@@ -12,8 +12,8 @@ def generate_launch_description():
             composable_node_descriptions=[
                 ComposableNode(
                     package='software_training',
-                    plugin='composition::turtle_service_request_node',
-                    name='turtle_request'),
+                    plugin='software_training::p1_clear',
+                    name='p1'),
             ],
             output='screen',
     )

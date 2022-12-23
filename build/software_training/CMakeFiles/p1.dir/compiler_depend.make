@@ -640,8 +640,38 @@ CMakeFiles/p1.dir/src/p1_clear.cpp.o: /home/edw/Documents/uwrt/software_challeng
   /opt/ros/galactic/include/turtlesim/srv/kill.hpp \
   /opt/ros/galactic/include/turtlesim/srv/detail/kill__struct.hpp \
   /opt/ros/galactic/include/turtlesim/srv/detail/kill__builder.hpp \
-  /opt/ros/galactic/include/turtlesim/srv/detail/kill__traits.hpp
+  /opt/ros/galactic/include/turtlesim/srv/detail/kill__traits.hpp \
+  /opt/ros/galactic/include/rclcpp_components/register_node_macro.hpp \
+  /opt/ros/galactic/include/class_loader/class_loader.hpp \
+  /opt/ros/galactic/include/console_bridge/console.h \
+  /opt/ros/galactic/include/console_bridge_export.h \
+  /opt/ros/galactic/include/class_loader/class_loader_core.hpp \
+  /opt/ros/galactic/include/class_loader/exceptions.hpp \
+  /opt/ros/galactic/include/class_loader/visibility_control.hpp \
+  /opt/ros/galactic/include/class_loader/meta_object.hpp \
+  /opt/ros/galactic/include/class_loader/register_macro.hpp \
+  /opt/ros/galactic/include/rclcpp_components/node_factory_template.hpp \
+  /opt/ros/galactic/include/rclcpp_components/node_factory.hpp \
+  /opt/ros/galactic/include/rclcpp_components/node_instance_wrapper.hpp
 
+
+/opt/ros/galactic/include/rclcpp_components/node_instance_wrapper.hpp:
+
+/opt/ros/galactic/include/rclcpp_components/node_factory.hpp:
+
+/opt/ros/galactic/include/class_loader/register_macro.hpp:
+
+/opt/ros/galactic/include/class_loader/meta_object.hpp:
+
+/opt/ros/galactic/include/class_loader/visibility_control.hpp:
+
+/opt/ros/galactic/include/class_loader/exceptions.hpp:
+
+/opt/ros/galactic/include/console_bridge_export.h:
+
+/opt/ros/galactic/include/class_loader/class_loader.hpp:
+
+/opt/ros/galactic/include/rclcpp_components/register_node_macro.hpp:
 
 /opt/ros/galactic/include/turtlesim/srv/detail/kill__traits.hpp:
 
@@ -1703,6 +1733,8 @@ CMakeFiles/p1.dir/src/p1_clear.cpp.o: /home/edw/Documents/uwrt/software_challeng
 
 /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__struct.hpp:
 
+/opt/ros/galactic/include/class_loader/class_loader_core.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /opt/ros/galactic/include/rclcpp/time.hpp:
@@ -1710,6 +1742,8 @@ CMakeFiles/p1.dir/src/p1_clear.cpp.o: /home/edw/Documents/uwrt/software_challeng
 /opt/ros/galactic/include/libstatistics_collector/collector/generate_statistics_message.hpp:
 
 /opt/ros/galactic/include/builtin_interfaces/msg/detail/duration__builder.hpp:
+
+/opt/ros/galactic/include/rclcpp_components/node_factory_template.hpp:
 
 /opt/ros/galactic/include/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
 
@@ -1856,6 +1890,8 @@ CMakeFiles/p1.dir/src/p1_clear.cpp.o: /home/edw/Documents/uwrt/software_challeng
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /opt/ros/galactic/include/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
+
+/opt/ros/galactic/include/console_bridge/console.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
