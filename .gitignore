@@ -61,7 +61,7 @@ CMakeLists.txt.user
 
 cmake-build-debug/
 
-install/
+/install
+/build
 
-
-log/
+/log
