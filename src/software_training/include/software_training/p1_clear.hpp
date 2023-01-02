@@ -9,7 +9,7 @@
 
 #include <turtlesim/srv/kill.hpp>
 
-namespace software_training {
+namespace composition {
 class p1_clear : public rclcpp::Node {
     public:
         p1_clear(const rclcpp::NodeOptions &options);
