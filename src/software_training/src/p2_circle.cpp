@@ -17,20 +17,17 @@ p2_circle::p2_circle(const rclcpp::NodeOptions& options)
         message->linear.y = this->linear_y;
         message->linear.z = this->linear_z;
 
-        std::cout<<"static: "<<p2_circle::linear_x<<std::endl;
-        std::cout<<"regular: "<<this->linear_x<<std::endl;
-        std::cout<<message->linear.x<<std::endl;
         message->angular.x = this->angular_x;
         message->angular.y = this->angular_y;
         message->angular.z = this->angular_z;
 
         // send velocity message with move constructor
-        this->publisher->publish(std::move(message));
+        publisher->publish(std::move(message));
     };
 
     this->publisher = this->create_publisher<geometry_msgs::msg::Twist>
-        ("p2_circle_node", 10);
-    this->timer = this->create_wall_timer(1ms, publish_callback);
+        ("turtle1/cmd_vel", 10);
+    this->timer = this->create_wall_timer(100ms, publish_callback);
 
 }
 

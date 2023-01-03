@@ -18,9 +18,9 @@ class p2_circle : public rclcpp::Node {
         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher;
         rclcpp::TimerBase::SharedPtr timer;
 
-        static constexpr float linear_x = 12;
-        static constexpr float linear_y = 12;
-        static constexpr float linear_z = 12;
+        static constexpr float linear_x = 1.2;
+        static constexpr float linear_y = 1.2;
+        static constexpr float linear_z = 1.2;
         static constexpr float angular_x = 1.41;
         static constexpr float angular_y = 1.41;
         static constexpr float angular_z = 1.41;
