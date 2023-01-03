@@ -61,6 +61,24 @@ ament_target_dependencies(p1
 rclcpp_components_register_nodes(p1 "composition::p1_clear")
 set(node_plugins "${node_plugins}composition::p1_clear;$<TARGET_FILE:p1>\n")
 
+# -------------------------------------------------------------------
+# P2
+# -------------------------------------------------------------------
+add_library(p2 SHARED
+            src/p2_circle.cpp)
+
+target_compile_definitions(p2 PRIVATE "SOFTWARE_TRAINING_BUILDING_DLL")
+
+ament_target_dependencies(p2
+  "rclcpp"
+  "rclcpp_components"
+  "turtlesim"
+  "geometry_msgs"
+  "std_msgs")   
+rclcpp_components_register_nodes(p2 "composition::p2_circle")
+set(node_plugins "${node_plugins}composition::p2_clear;$<TARGET_FILE:p2>\n")
+
+
 
 # -------------------------------------------------------------------
 # Install binary locations
@@ -68,6 +86,7 @@ set(node_plugins "${node_plugins}composition::p1_clear;$<TARGET_FILE:p1>\n")
 
 install(TARGETS
   p1	
+  p2
 
 	ARCHIVE DESTINATION lib
 	LIBRARY DESTINATION lib 

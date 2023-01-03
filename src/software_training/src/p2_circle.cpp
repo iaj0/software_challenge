@@ -1,9 +1,33 @@
 #include "../include/software_training/p2_circle.hpp"
-#include <geometry_msgs/msg/twist.hpp>
+
+using namespace std::chrono_literals;
 namespace composition {
 
-p2_circle::p2_circle(const rclcpp::NodeOptions& options) : Node{"p1_clear", options} {
-    publisher = this->create_publisher<std_msgs::msg::String>
-}
+p2_circle::p2_circle(const rclcpp::NodeOptions& options) 
+    : Node{"p2_circle", options} {
+    
+    auto publish_callback = [this](void) -> void {
+        auto message = std::make_unique<geometry_msgs::msg::Twist>();
+        message->linear.x = this->linear_x;
+        message->linear.y = this->linear_y;
+        message->linear.z = this->linear_z;
+
+        message->angular.x = this->angular_x;
+        message->angular.y = this->angular_y;
+        message->angular.z = this->angular_z;
+
+        // send velocity message with move constructor
+        this->publisher->publish(std::move(message));
+    };
+
+    this->publisher = this->create_publisher<geometry_msgs::msg::Twist>
+        ("p2_circle", 10);
+    this->timer = this->create_wall_timer(1ms, publish_callback);
 
 }
+
+} // namespace composition
+
+#include <rclcpp_components/register_node_macro.hpp>
+
+RCLCPP_COMPONENTS_REGISTER_NODE(composition::p2_circle)
