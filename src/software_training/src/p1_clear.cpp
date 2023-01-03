@@ -24,6 +24,8 @@ void p1_clear::kill() {
         req->name = turtle; // otherwise tries to kill "turtle []"
         auto callback = [this, turtle](rclcpp::Client<turtlesim::srv::Kill>::SharedFuture response) -> void {
             std::cout<<"killed: "<<turtle<<std::endl;
+            auto output = response.get();
+            std::cout<<"response: "<<output<<std::endl;
             rclcpp::shutdown();
         };
         

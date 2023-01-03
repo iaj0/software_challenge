@@ -32,9 +32,15 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 # -------------------------------------------------------------------
-# include and setup plugins 
+# include, generate interfaces, and setup plugins 
 # -------------------------------------------------------------------
 include_directories(include)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+	"msg/Turtle.msg"
+	DEPENDENCIES std_msgs geometry_msgs builtin_interfaces # not sure if i need geometry?
+	)
+ament_export_dependencies(rosidl_default_runtime)
 
 #create resource which references the libraries in the binary bin
 set(node_plugins "")

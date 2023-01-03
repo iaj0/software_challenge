@@ -21,4 +21,4 @@ class p1_clear : public rclcpp::Node {
 
 };
 
-}
+} // namespace composition
