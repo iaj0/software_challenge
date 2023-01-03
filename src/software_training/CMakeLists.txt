@@ -17,7 +17,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 # -------------------------------------------------------------------
-# find dependencies
+# find packages 
 # -------------------------------------------------------------------
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -76,7 +76,7 @@ ament_target_dependencies(p2
   "geometry_msgs"
   "std_msgs")   
 rclcpp_components_register_nodes(p2 "composition::p2_circle")
-set(node_plugins "${node_plugins}composition::p2_clear;$<TARGET_FILE:p2>\n")
+set(node_plugins "${node_plugins}composition::p2_circle;$<TARGET_FILE:p2>\n")
 
 
 

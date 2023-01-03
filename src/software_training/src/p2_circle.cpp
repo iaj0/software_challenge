@@ -1,4 +1,5 @@
 #include "../include/software_training/p2_circle.hpp"
+#include <iostream>
 
 using namespace std::chrono_literals;
 namespace composition {
@@ -6,12 +7,19 @@ namespace composition {
 p2_circle::p2_circle(const rclcpp::NodeOptions& options) 
     : Node{"p2_circle", options} {
     
+    std::cout<<"\nSTARTED\n"<<std::endl;
     auto publish_callback = [this](void) -> void {
+
+
+
         auto message = std::make_unique<geometry_msgs::msg::Twist>();
-        message->linear.x = this->linear_x;
+        message->linear.x = p2_circle::linear_x;
         message->linear.y = this->linear_y;
         message->linear.z = this->linear_z;
 
+        std::cout<<"static: "<<p2_circle::linear_x<<std::endl;
+        std::cout<<"regular: "<<this->linear_x<<std::endl;
+        std::cout<<message->linear.x<<std::endl;
         message->angular.x = this->angular_x;
         message->angular.y = this->angular_y;
         message->angular.z = this->angular_z;
@@ -21,7 +29,7 @@ p2_circle::p2_circle(const rclcpp::NodeOptions& options)
     };
 
     this->publisher = this->create_publisher<geometry_msgs::msg::Twist>
-        ("p2_circle", 10);
+        ("p2_circle_node", 10);
     this->timer = this->create_wall_timer(1ms, publish_callback);
 
 }

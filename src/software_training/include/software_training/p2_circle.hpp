@@ -15,15 +15,15 @@ class p2_circle : public rclcpp::Node {
     public:
         p2_circle(const rclcpp::NodeOptions& options);
     private:
-        rclcpp::TimerBase::SharedPtr timer;
         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher;
+        rclcpp::TimerBase::SharedPtr timer;
 
-        static constexpr float linear_x = 11;
-        static constexpr float linear_y = 11;
-        static constexpr float linear_z = 11;
-        static constexpr float angular_x = 0.41;
-        static constexpr float angular_y = 0.41;
-        static constexpr float angular_z = 0.41;
+        static constexpr float linear_x = 12;
+        static constexpr float linear_y = 12;
+        static constexpr float linear_z = 12;
+        static constexpr float angular_x = 1.41;
+        static constexpr float angular_y = 1.41;
+        static constexpr float angular_z = 1.41;
 
 };
 
