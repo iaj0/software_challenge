@@ -37,7 +37,7 @@ find_package(rosidl_default_generators REQUIRED)
 include_directories(include)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-	"msg/Turtle.msg"
+	"srv/Reset.srv"
 	DEPENDENCIES std_msgs geometry_msgs builtin_interfaces # not sure if i need geometry?
 	)
 ament_export_dependencies(rosidl_default_runtime)
@@ -95,6 +95,25 @@ rclcpp_components_register_nodes(p3 "composition::p3_spawn")
 set(node_plugins "${node_plugins}composition::p3_spawn;$<TARGET_FILE:p3>\n")
 
 # -------------------------------------------------------------------
+# P4
+# -------------------------------------------------------------------
+add_library(p4 SHARED
+            src/p4_reset.cpp)
+
+target_compile_definitions(p4 PRIVATE "SOFTWARE_TRAINING_BUILDING_DLL")
+
+ament_target_dependencies(p4
+  "rclcpp"
+  "rclcpp_components"
+  "turtlesim"
+  "std_msgs")   
+
+  rosidl_target_interfaces(p4 ${PROJECT_NAME} "rosidl_typesupport_cpp") # need for custom srv
+
+rclcpp_components_register_nodes(p4 "composition::p4_reset")
+set(node_plugins "${node_plugins}composition::p4_reset;$<TARGET_FILE:p4\n>")
+
+# -------------------------------------------------------------------
 # Install binary locations
 # -------------------------------------------------------------------
 
@@ -102,6 +121,7 @@ install(TARGETS
   p1	
   p2
   p3
+  p4
 
 	ARCHIVE DESTINATION lib
 	LIBRARY DESTINATION lib 
