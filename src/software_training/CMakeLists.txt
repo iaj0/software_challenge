@@ -38,6 +38,7 @@ include_directories(include)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
 	"srv/Reset.srv"
+  "msg/Distance.msg"
 	DEPENDENCIES std_msgs geometry_msgs builtin_interfaces # not sure if i need geometry?
 	)
 ament_export_dependencies(rosidl_default_runtime)
@@ -114,6 +115,24 @@ rclcpp_components_register_nodes(p4 "composition::p4_reset")
 set(node_plugins "${node_plugins}composition::p4_reset;$<TARGET_FILE:p4\n>")
 
 # -------------------------------------------------------------------
+# P5
+# -------------------------------------------------------------------
+add_library(p5 SHARED
+            src/p5_distance.cpp)
+
+target_compile_definitions(p5 PRIVATE "SOFTWARE_TRAINING_BUILDING_DLL")
+
+ament_target_dependencies(p5
+  "rclcpp"
+  "rclcpp_components"
+  "turtlesim"
+  "std_msgs")   
+
+  rosidl_target_interfaces(p5 ${PROJECT_NAME} "rosidl_typesupport_cpp") # need for custom srv
+
+rclcpp_components_register_nodes(p5 "composition::p5_distance")
+set(node_plugins "${node_plugins}composition::p5_distance;$<TARGET_FILE:p5\n>")
+# -------------------------------------------------------------------
 # Install binary locations
 # -------------------------------------------------------------------
 
@@ -122,6 +141,7 @@ install(TARGETS
   p2
   p3
   p4
+  p5
 
 	ARCHIVE DESTINATION lib
 	LIBRARY DESTINATION lib 
