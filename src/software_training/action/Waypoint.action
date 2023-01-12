@@ -1,0 +1,12 @@
+#goal
+geometry_msgs/Vector3 linear_pos
+geometry_msgs/Vector3 angular_pos
+
+#result
+---
+uint64 duration
+
+---
+float32 x_pos
+float32 y_pos
+float32 theta_pos
