@@ -52,6 +52,15 @@ private:
     static float linear_velocity;
     static float angular_velocity;
     
+    struct vec3 {
+        vec3(float x = 0, float y = 0, float z = 0): x{x}, y{y}, z{z} { }
+        float x;
+        float y;
+        float z;
+        bool or_less (vec3 a, vec3 b) {
+            return a.x < b.x || a.y < b.y || a.z < c.z;
+        }
+    }
 }
 
 } // namespace composition
