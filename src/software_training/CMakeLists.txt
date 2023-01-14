@@ -39,6 +39,7 @@ include_directories(include)
 rosidl_generate_interfaces(${PROJECT_NAME}
 	"srv/Reset.srv"
   "msg/Distance.msg"
+  "action/Waypoint.action"
 	DEPENDENCIES std_msgs geometry_msgs builtin_interfaces # not sure if i need geometry?
 	)
 ament_export_dependencies(rosidl_default_runtime)
@@ -132,6 +133,32 @@ ament_target_dependencies(p5
 
 rclcpp_components_register_nodes(p5 "composition::p5_distance")
 set(node_plugins "${node_plugins}composition::p5_distance;$<TARGET_FILE:p5\n>")
+
+# -------------------------------------------------------------------
+# P6
+# -------------------------------------------------------------------
+add_library(p6 SHARED
+            src/p6_waypoint.cpp)
+
+target_compile_definitions(p6 PRIVATE "SOFTWARE_TRAINING_BUILDING_DLL")
+
+ament_target_dependencies(p6
+  "rclcpp"
+  "rclcpp_components"
+  "turtlesim"
+  "std_msgs")   
+
+  rosidl_target_interfaces(p6 ${PROJECT_NAME} "rosidl_typesupport_cpp") # need for custom srv
+
+
+
+rclcpp_components_register_nodes(p6 "composition::p6_waypoint")
+set(node_plugins "${node_plugins}composition::p6_waypoint;$<TARGET_FILE:p6\n>")
+
+
+# rclcpp_components_register_nodes(p6 PLUGIN "composition::p6_waypoint"
+#                                     EXECUTABLE p6_waypoint_run)
+
 # -------------------------------------------------------------------
 # Install binary locations
 # -------------------------------------------------------------------
@@ -142,6 +169,7 @@ install(TARGETS
   p3
   p4
   p5
+  p6 
 
 	ARCHIVE DESTINATION lib
 	LIBRARY DESTINATION lib 

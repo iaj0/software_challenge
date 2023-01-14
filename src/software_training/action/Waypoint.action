@@ -6,7 +6,8 @@ geometry_msgs/Vector3 angular_pos
 ---
 uint64 duration
 
+#feedback
 ---
-float32 x_pos
-float32 y_pos
-float32 theta_pos
+float64 x_pos
+float64 y_pos
+float64 theta_pos

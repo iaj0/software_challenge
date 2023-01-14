@@ -1,8 +1,11 @@
 #pragma once
 
+#include <chrono>
 #include <cstdlib>
+#include <functional>
 #include <memory>
 #include <string>
+#include <thread>
 #include <vector>
 #include <iostream>
 
@@ -10,7 +13,7 @@
 #include <rclcpp/time.hpp>
 #include <rclcpp_action/rclcpp_action.hpp>
 
-#include <software_training/action/software.hpp>
+#include <software_training/action/waypoint.hpp>
 #include <geometry_msgs/msg/twist.hpp> 
 #include <turtlesim/msg/pose.hpp> 
 
@@ -24,9 +27,9 @@ public:
 private:
     rclcpp_action::Server<software_training::action::Waypoint>::SharedPtr action_server;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher;
-    rclcpp::Subscriber<geometry_msgs::msg::Pose>::SharedPtr subscriber;
+    rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr subscriber;
 
-    rclcpp_action::Goal_response handle_goal(
+    rclcpp_action::GoalResponse handle_goal(
         const rclcpp_action::GoalUUID &uuid,
         std::shared_ptr<const software_training::action::Waypoint::Goal> goal
     );
@@ -52,15 +55,28 @@ private:
     static float linear_velocity;
     static float angular_velocity;
     
+    template <typename T>
+ 
     struct vec3 {
-        vec3(float x = 0, float y = 0, float z = 0): x{x}, y{y}, z{z} { }
-        float x;
-        float y;
-        float z;
-        bool or_less (vec3 a, vec3 b) {
-            return a.x < b.x || a.y < b.y || a.z < c.z;
+        vec3(T x=0, T y=0, T z=0): x{x}, y{y}, z{z} { }
+        T x;
+        T y;
+        T z;
+        bool or_less(vec3 b) {
+            return x < b.x || y < b.y || z < b.z;
         }
-    }
-}
+        vec3 advance(vec3& goal) {
+            vec3 ans;
+            ans.x = (x < goal.x) ? ++x : x;
+            ans.y = (y < goal.y) ? ++y : y;
+            ans.z = (z < goal.z) ? ++z : z;
+            return ans;
+        }
+    };
+
+    typedef vec3<float> vec3f; 
+    typedef vec3<double> vec3d;
+    typedef vec3<float&> vec3f_ref;
+};
 
 } // namespace composition
