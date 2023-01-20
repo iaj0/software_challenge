@@ -26,7 +26,7 @@ p2_circle::p2_circle(const rclcpp::NodeOptions& options)
     };
 
     this->publisher = this->create_publisher<geometry_msgs::msg::Twist>
-        ("moving_turtle/cmd_vel", 10);
+        ("turtle1/cmd_vel", 10);
     this->timer = this->create_wall_timer(100ms, publish_callback);
 
 }
