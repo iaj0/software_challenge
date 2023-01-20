@@ -1,6 +1,6 @@
 #goal
-geometry_msgs/Vector3 linear_pos
-geometry_msgs/Vector3 angular_pos
+float64 x
+float64 y
 
 #result
 ---
@@ -8,6 +8,4 @@ uint64 duration
 
 #feedback
 ---
-float64 x_pos
-float64 y_pos
-float64 theta_pos
+float64 distance 
