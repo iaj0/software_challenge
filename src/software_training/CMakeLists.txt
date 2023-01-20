@@ -145,7 +145,9 @@ target_compile_definitions(p6 PRIVATE "SOFTWARE_TRAINING_BUILDING_DLL")
 ament_target_dependencies(p6
   "rclcpp"
   "rclcpp_components"
+  "rclcpp_action"
   "turtlesim"
+  "geometry_msgs"
   "std_msgs")   
 
   rosidl_target_interfaces(p6 ${PROJECT_NAME} "rosidl_typesupport_cpp") # need for custom srv
