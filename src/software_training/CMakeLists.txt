@@ -59,6 +59,7 @@ ament_target_dependencies(p1
   "rclcpp"
   "rclcpp_components"
   "turtlesim"
+  "geometry_msgs"
   "std_msgs")   
 rclcpp_components_register_nodes(p1 "composition::p1_clear")
 set(node_plugins "${node_plugins}composition::p1_clear;$<TARGET_FILE:p1>\n")
@@ -110,7 +111,7 @@ ament_target_dependencies(p4
   "turtlesim"
   "std_msgs")   
 
-  rosidl_target_interfaces(p4 ${PROJECT_NAME} "rosidl_typesupport_cpp") # need for custom srv
+rosidl_target_interfaces(p4 ${PROJECT_NAME} "rosidl_typesupport_cpp") # need for custom srv
 
 rclcpp_components_register_nodes(p4 "composition::p4_reset")
 set(node_plugins "${node_plugins}composition::p4_reset;$<TARGET_FILE:p4\n>")
@@ -129,7 +130,7 @@ ament_target_dependencies(p5
   "turtlesim"
   "std_msgs")   
 
-  rosidl_target_interfaces(p5 ${PROJECT_NAME} "rosidl_typesupport_cpp") # need for custom srv
+rosidl_target_interfaces(p5 ${PROJECT_NAME} "rosidl_typesupport_cpp") # need for custom srv
 
 rclcpp_components_register_nodes(p5 "composition::p5_distance")
 set(node_plugins "${node_plugins}composition::p5_distance;$<TARGET_FILE:p5\n>")
@@ -150,9 +151,7 @@ ament_target_dependencies(p6
   "geometry_msgs"
   "std_msgs")   
 
-  rosidl_target_interfaces(p6 ${PROJECT_NAME} "rosidl_typesupport_cpp") # need for custom srv
-
-
+rosidl_target_interfaces(p6 ${PROJECT_NAME} "rosidl_typesupport_cpp") # need for custom srv
 
 rclcpp_components_register_nodes(p6 "composition::p6_waypoint")
 set(node_plugins "${node_plugins}composition::p6_waypoint;$<TARGET_FILE:p6\n>")
