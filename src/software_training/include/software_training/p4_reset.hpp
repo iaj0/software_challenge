@@ -31,8 +31,7 @@ private:
         float theta; // rotation?
     } turtle;
 
-    std::vector<turtle> turtles {{1,1,90}};
-
+    std::vector<turtle> turtles {{1,1,0}};
     
 
 };
