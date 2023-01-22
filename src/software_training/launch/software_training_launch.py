@@ -18,6 +18,8 @@ from launch.substitutions import (EnvironmentVariable, FindExecutable,
                                 LaunchConfiguration, LocalSubstitution,
                                 PythonExpression)
 
+import random
+
 def generate_launch_description():
     clear_container = ComposableNodeContainer(
             name = 'clear_container',
@@ -26,7 +28,7 @@ def generate_launch_description():
             executable = 'component_container',
             composable_node_descriptions = [
                 ComposableNode(
-                    package =' software_training',
+                    package ='software_training',
                     plugin = 'composition::p1_clear',
                     name = 'p1_clear'),
             ],
@@ -78,6 +80,20 @@ def generate_launch_description():
         output = 'screen',
     )
 
+    rand_x = "{:.2f}".format(random.uniform(1.0, 9.0))
+    rand_y = "{:.2f}".format(random.uniform(1.0, 9.0)) 
+    send_goal = ExecuteProcess(
+        cmd=[[
+            FindExecutable(name='ros2'),
+            ' action send_goal /p6_waypoint software_training/action/Waypoint "{x: ',
+            rand_x,
+            ' , y: ',
+            rand_y,
+            ' }" '
+        ]],
+        shell=True
+    )
+
     on_turtlesim_start = RegisterEventHandler(
         OnProcessStart(
             target_action = turtlesim,
@@ -98,10 +114,15 @@ def generate_launch_description():
             target_action = spawn_container,
             on_completion = [
                 LogInfo(msg = 'spawn finished, demo running'),
-                demo_container
+                demo_container,
+                TimerAction(
+                    period=2.0,
+                    actions=[send_goal],
+                )
             ],
         )
     )
+    
     process_exit = RegisterEventHandler(
         OnProcessExit(
             target_action=turtlesim,
