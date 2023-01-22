@@ -13,7 +13,7 @@ p6_waypoint:: p6_waypoint(const rclcpp::NodeOptions& options) : Node{"p6_waypoin
     // (post) better way wouldve been to give p6_waypoint it's own vec2s instead of making curr_pos
 
     this->action_server = rclcpp_action::create_server<software_training::action::Waypoint>(
-        this, "p6_waypoint_action_server",
+        this, "p6_waypoint",
         std::bind(&p6_waypoint::handle_goal, this, _1, _2),
         std::bind(&p6_waypoint::handle_cancel, this, _1),
         std::bind(&p6_waypoint::handle_accepted, this, _1)
@@ -78,11 +78,11 @@ void p6_waypoint::execute(const std::shared_ptr<GoalHandleActionServer> goal_han
     RCLCPP_INFO(this->get_logger(), "current position: (%f, %f)", curr_pos.x, curr_pos.y);
     RCLCPP_INFO(this->get_logger(), "goal: (%f, %f)", goal_pos.x, goal_pos.y);
 
-    double error = 0.05;
-
+    double error = 0.01; // lower error = takes longer to get exact position
+                         // need error limit cuz decimal precision means its hard to get exact position
     while(rclcpp::ok() && !(goal_pos.in_range(curr_pos, error))) {
         // update velocity with current pos for higher accuracy
-        vec2d velocity{goal_pos.x - curr_pos.x, goal_pos.y - curr_pos.y};
+        vec2d velocity{(goal_pos.x - curr_pos.x) * 2, (goal_pos.y - curr_pos.y) * 2};
         RCLCPP_INFO(this->get_logger(), "velocity: (%f, %f)", velocity.x, velocity.y);
 
         auto message = std::make_unique<geometry_msgs::msg::Twist>();
